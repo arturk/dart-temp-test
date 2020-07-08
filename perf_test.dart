@@ -113,6 +113,7 @@ void main() {
   group('Profiling flow', () {
     test("Do smth", () async {
       int locStartTime = DateTime.now().microsecondsSinceEpoch;
+      sleep(Duration(seconds:10)); // Do something with your app here manually
       setUserTag("My Custom Tag For This Activity", locStartTime);
     });
   }, tags: 'Performance');
